@@ -87,7 +87,7 @@ echo '<body>';
 		}
 		
 		echo '<td align=center>';
-		echo '<img src="gameboy-php/gbapp_converter.php?file='.$path.'/'.$file_name.'&color='.$color.'">';
+		echo '<img src="gbapp_converter.php?file='.$path.'/'.$file_name.'&color='.$color.'">';
 		echo "<br>";
 		echo $file_name;
 		echo '</td>';
