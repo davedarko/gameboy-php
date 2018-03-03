@@ -31,8 +31,6 @@ echo '<body>';
 	{
 		$color = $_GET['color'];
 	}
-
-	
 ?>
 <h1>Gameboy Applet</h2>
 <div class="container">
@@ -55,7 +53,7 @@ echo '<body>';
 			<li>Save name (Drucken)</li>
 			<li>Wait for return</li>
 			<li>refresh page</li>
-			<a href="blog.php?tag=gameboy%20printer">more about</a><br>
+
 			<h2>Wie jetzt?</h2>
 			<ul>
 			<li>Mal etwas</li>
@@ -64,7 +62,6 @@ echo '<body>';
 			<li>auf Bild warten</li>
 			<li>Seite neuladen</li>
 			</ul>
-			<a href="blog.php?tag=gameboy%20printer">mehr dar&uuml;ber</a>
 		</div>
 	</div>
 
