@@ -9,7 +9,19 @@
 	if (!empty($_GET['format'])) $format = $_GET['format'];
 	else $format = "img";
 
-	if ($format == "img") {
+	print_r(
+		array(
+			$file_name,
+			file_exists($file_name),
+			$format,
+			$color
+		)
+	);
+
+	exit;
+
+	if ($format == "img") 
+	{
 		$color = hexdec($color);
 		$r = intval($color/256/256);
 		$g = intval(($color-$r*256*256)/256);
