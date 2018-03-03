@@ -11,17 +11,6 @@
 	if (!empty($_GET['format'])) $format = $_GET['format'];
 	else $format = "img";
 
-	print_r(
-		array(
-			$file_name,
-			file_exists($file_name),
-			$format,
-			$color
-		)
-	);
-
-	exit;
-
 	if ($format == "img") 
 	{
 		$color = hexdec($color);
