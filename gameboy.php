@@ -95,13 +95,13 @@ echo '<body>';
 	echo '<div class="row">';
 	foreach ($file_names as $file_name) 
 	{
-		if ($i%3==0 && $i>0) 
+		if ($i%4==0 && $i>0) 
 		{
 			echo '</div>';
 			echo '<div class="row">';
 		}
 		
-		echo '<div class="four columns">';
+		echo '<div class="three columns">';
 		echo '<img src="gbapp_converter.php?file='.$path.'/'.$file_name.'&color='.$color.'">';
 		echo '<br>';
 		echo $file_name;
