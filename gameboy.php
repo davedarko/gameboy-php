@@ -38,30 +38,45 @@ echo '<body>';
 <div class="container">
 	<div class="row">
 		<div class="four columns">
-<applet code="GameBoyApp.class" archive="gameboy.jar" width="247" height="299"></applet>
-	</div>
-	<div class="eight columns">
+		<applet 
+			code="GameBoyApp.class" 
+			archive="gameboy.jar" 
+			width="247"
+			height="299"
+			>
+		</applet>
+		</div>
 
-<h2>how to?</h2>
-1. Draw something<br>
-2. Press PRINT Button<br>
-3. Save name (Drucken)<br>
-4. Wait for return<br>
-5. refresh page<p>
-<a href="blog.php?tag=gameboy%20printer">more&about</a><p>
-<h2>Wie jetzt?</h2>
-1. Mal etwas<br>
-2. PRINT Knopf dr&uuml;cken<br>
-3. Name speichern (Drucken)<br>
-4. auf Bild warten<br>
-5. Seite neuladen <p>
-<a href="blog.php?tag=gameboy%20printer">mehr&dar&uuml;ber</a><p>
-</div>
-</div>
+		<div class="eight columns">
+			<h2>how to?</h2>
+			<ul>
+			<li>Draw something</li>
+			<li>Press PRINT Button</li>
+			<li>Save name (Drucken)</li>
+			<li>Wait for return</li>
+			<li>refresh page</li>
+			<a href="blog.php?tag=gameboy%20printer">more about</a><br>
+			<h2>Wie jetzt?</h2>
+			<ul>
+			<li>Mal etwas</li>
+			<li>PRINT Knopf dr&uuml;cken</li>
+			<li>Name speichern (Drucken)</li>
+			<li>auf Bild warten</li>
+			<li>Seite neuladen</li>
+			</ul>
+			<a href="blog.php?tag=gameboy%20printer">mehr dar&uuml;ber</a>
+		</div>
+	</div>
 
 <h2>Gallerie</h2>
-<table width=100%>
-<tr>
+<div class="row">
+	<div class="four columns">
+	</div>
+	<div class="four columns">
+	</div>
+	<div class="four columns">
+	</div>
+</div>
 <?php
 	$path = "img/gb";
 
@@ -80,23 +95,23 @@ echo '<body>';
 	$cnt = count($file_names);
 	$i=0;
 
+	echo '<div class="row">';
 	foreach ($file_names as $file_name) 
 	{
 		if ($i%3==0 && $i>0) 
 		{
-			echo "</tr><tr>";
+			echo '</div>';
+			echo '<div class="row">';
 		}
 		
-		echo '<td align=center>';
+		echo '<div class="four columns">';
 		echo '<img src="gbapp_converter.php?file='.$path.'/'.$file_name.'&color='.$color.'">';
-		echo "<br>";
-		echo $file_name;
-		echo '</td>';
+		echo '</div>';
 		$i++;
 	}
+	echo '</div>';
 
-echo '</tr>';
-echo '</table>';
+echo '</div>';
 echo '</body>';
 echo '</html>';
 
