@@ -62,9 +62,9 @@ echo '<body>';
 <table width=100%>
 <tr>
 <?php
-	$path = "../img/gb";
+	$path = "img/gb";
 
-	$handle=opendir($path);
+	$handle=opendir('../'.$path);
 
     $file_names = array();
     while ($datei = readdir($handle))
