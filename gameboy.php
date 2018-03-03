@@ -32,8 +32,9 @@ echo '<body>';
 		$color = $_GET['color'];
 	}
 ?>
-<h1>Gameboy Applet</h2>
+
 <div class="container">
+	<h1>Gameboy Applet</h2>
 	<div class="row">
 		<div class="four columns">
 		<applet 
