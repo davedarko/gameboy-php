@@ -85,13 +85,11 @@ echo '<body>';
 		{
 			echo "</tr><tr>";
 		}
-		$meta_data = explode('[/.-]', $file_name);
+		
 		echo '<td align=center>';
-		echo '<img src="gbapp_converter.php?file='.$path.'/'.$file_name.'&color='.$color.'">';
+		echo '<img src="gameboy-php/gbapp_converter.php?file='.$path.'/'.$file_name.'&color='.$color.'">';
 		echo "<br>";
-		echo $meta_data[0];
-		echo "<br>";
-		echo $meta_data[1];
+		echo $file_name;
 		echo '</td>';
 		$i++;
 	}
