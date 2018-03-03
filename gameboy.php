@@ -1,13 +1,43 @@
 <?php
+
+echo '<!DOCTYPE html>';
+echo '<html>';
+echo '<head>';
+echo '<meta charset="utf-8">';
+echo '<meta name="description" content="">';
+echo '<meta name="author" content="">';
+
+echo '<!-- Mobile Specific Metas -->';
+echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
+
+echo '<!-- CSS -->';
+echo '<style>';
+include('../css/normalize.min.css');
+include('../css/skeleton.min.css');
+include('../css/font.min.css');
+include('../css/custom.min.css');
+echo '</style>';
+echo '<title>';
+echo 'davedarko.com';
+echo '</title>';
+echo '</head>';
+
+echo '<body>';
+
 	$title="Gameboy Applet";
-	include ("head.php");
-	if (!empty($_GET['color'])) $color = $_GET['color'];
-	else $color = "ffddbb";
+
+	$color = "ffddbb";
+	if (!empty($_GET['color'])) 
+	{
+		$color = $_GET['color'];
+	}
 ?>
 <h1>Gameboy Applet</h2>
 <table width=100%>
 <tr>
-<td width=50%><applet code="GameBoyApp.class" archive="gameboy.jar" width="247" height="299"></applet></td>
+<td width=50%>
+	<applet code="GameBoyApp.class" archive="gameboy.jar" width="247" height="299"></applet>
+</td>
 <td width=50%>
 <h2>how to?</h2>
 1. Draw something<br>
@@ -32,23 +62,43 @@
 <table width=100%>
 <tr>
 <?php
+	$path = "../img/gb";
 
-	$handle=opendir("./gameboyapp"); 
-    $blarray = array();
-    while ($datei = readdir($handle)) if ( substr($datei,-3,3)=="dat" ) array_push($blarray, $datei);
-	rsort($blarray);
-	$cnt = count($blarray);
+	$handle=opendir($path);
+
+    $file_names = array();
+    while ($datei = readdir($handle))
+    {
+    	if (substr($datei,-3,3)=="dat") 
+    	{
+    		array_push($file_names, $datei);
+    	}
+    }
+	rsort($file_names);
+
+	$cnt = count($file_names);
 	$i=0;
-	foreach ($blarray as $key => $val) {
-		if ($i%3==0 && $i>0) echo "</tr><tr>";
-		$rheuma = split('[/.-]', $val);
-		echo "<td align=center><a href=\"gbapp_converter.php?file=./gameboyapp/$val&color=$color\"><img src=\"gbapp_converter.php?file=./gameboyapp/$val&color=$color\"></a><br>".$rheuma[0] ."<br>" . $rheuma[1] ."<p></td>\n";
+
+	foreach ($file_names as $file_name) 
+	{
+		if ($i%3==0 && $i>0) 
+		{
+			echo "</tr><tr>";
+		}
+		$meta_data = split('[/.-]', $file_name);
+		echo '<td align=center>';
+		echo '<img src="gbapp_converter.php?file='.$path.'/'.$file_name.'&color='.$color.'>';
+		echo "<br>";
+		echo $meta_data[0];
+		echo "<br>";
+		echo $meta_data[1];
+		echo '</td>';
 		$i++;
 	}
-?>
-</tr>
-</table>
 
-<?php
-	include ("fooder.php");
+echo '</tr>';
+echo '</table>';
+echo '</body>';
+echo '</html>';
+
 ?>
