@@ -103,6 +103,8 @@ echo '<body>';
 		
 		echo '<div class="four columns">';
 		echo '<img src="gbapp_converter.php?file='.$path.'/'.$file_name.'&color='.$color.'">';
+		echo '<br>';
+		echo $file_name;
 		echo '</div>';
 		$i++;
 	}
