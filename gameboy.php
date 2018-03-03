@@ -31,14 +31,17 @@ echo '<body>';
 	{
 		$color = $_GET['color'];
 	}
+
+	
 ?>
 <h1>Gameboy Applet</h2>
-<table width=100%>
-<tr>
-<td width=50%>
-	<applet code="GameBoyApp.class" archive="gameboy.jar" width="247" height="299"></applet>
-</td>
-<td width=50%>
+<div class="container">
+	<div class="row">
+		<div class="four columns">
+<applet code="GameBoyApp.class" archive="gameboy.jar" width="247" height="299"></applet>
+	</div>
+	<div class="eight columns">
+
 <h2>how to?</h2>
 1. Draw something<br>
 2. Press PRINT Button<br>
@@ -53,10 +56,8 @@ echo '<body>';
 4. auf Bild warten<br>
 5. Seite neuladen <p>
 <a href="blog.php?tag=gameboy%20printer">mehr&dar&uuml;ber</a><p>
-
-</td>
-</tr>
-</table>
+</div>
+</div>
 
 <h2>Gallerie</h2>
 <table width=100%>
