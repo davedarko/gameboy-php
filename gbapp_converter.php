@@ -3,6 +3,8 @@
 	if (empty($_GET['file'])) $file_name= "./gameboyapp/20111227023533-DAVE.dat";
 	else $file_name = $_GET['file'];
 
+	$file_name = '../' . $file_name;
+
 	if (!empty($_GET['color'])) $color = $_GET['color'];
 	else $color = "#00ee00";
 
