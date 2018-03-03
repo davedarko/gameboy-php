@@ -43,6 +43,9 @@ echo '<body>';
 			height="299"
 			>
 		</applet>
+
+		if you don't see the applet but still want to convert pictures, go here
+		<a href="http://davedarko.com/gameboy-php/GameBoyApp.php">http://davedarko.com/gameboy-php/GameBoyApp.php</a>
 		</div>
 
 		<div class="eight columns">

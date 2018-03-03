@@ -101,7 +101,7 @@ $ ().ready (function () {
 
 	if (supports_canvas()) 
 	{
-		console.log("Supports canvas");
+		console.log("Canvas is supported");
 	}
 	else 
 	{
