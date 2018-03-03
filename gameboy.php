@@ -85,7 +85,7 @@ echo '<body>';
 		{
 			echo "</tr><tr>";
 		}
-		$meta_data = split('[/.-]', $file_name);
+		$meta_data = explode('[/.-]', $file_name);
 		echo '<td align=center>';
 		echo '<img src="gbapp_converter.php?file='.$path.'/'.$file_name.'&color='.$color.'>';
 		echo "<br>";
